@@ -4,8 +4,10 @@
 //tuodaan tarvittavat moduulit ja alustetaan ne
 var express = require("express");
 var mongoose = require("mongoose");
+var cors = require("cors");
 
 var app = express();
+app.use(cors());
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
