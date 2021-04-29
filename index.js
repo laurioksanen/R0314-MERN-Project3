@@ -55,6 +55,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },(err)=
       cuisine: req.body.cuisine,
        borough: req.body.borough
     });
+    console.log("nimi on " + newRestaurant.name)
      newRestaurant.save(function(err, result) {
     if (err) console.log(err);
     console.log("Tallennettu: " + result);
