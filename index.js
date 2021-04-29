@@ -50,6 +50,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },(err)=
   //reitti "/api/add" luo tietokantaan dokumentin käyttäjän syöttämillä tiedoilla
   // ja lähettää käyttäjälle lisätyn dokumentin
   app.post("/api/add",(req,res)=>{
+    console.log("FEEFGFAFAS")
     console.log("Nimi on " + req.body.name)
   //   var newRestaurant = new restaurants({
   //     name: req.body.name,
