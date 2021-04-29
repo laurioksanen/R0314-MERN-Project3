@@ -55,12 +55,13 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },(err)=
       cuisine: req.body.cuisine,
        borough: req.body.borough
     });
-    console.log("nimi on " + newRestaurant.name)
+    sleep(500).then(()=>{
      newRestaurant.save(function(err, result) {
     if (err) console.log(err);
     console.log("Tallennettu: " + result);
     res.status(200).json("Lisattiin: " + result + "hahaaaaa" + "nii: " + req.body.name)
   });
+})
   });
 
   // "/api/update/:id" reitti päivittää tietokannassa olevan dokumentin sisältöä
@@ -102,3 +103,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },(err)=
   app.listen(PORT, function () {
     console.log("Server is running!")
 });
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
