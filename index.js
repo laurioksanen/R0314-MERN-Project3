@@ -58,7 +58,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },(err)=
      newRestaurant.save(function(err, result) {
     if (err) console.log(err);
     console.log("Tallennettu: " + result);
-    res.status(200).json("Lisattiin: " + result + "hahaaaaa" + "nimi: " + req.body.name)
+    res.status(200).json("Lisattiin: " + result + "hahaaaaa" + "nii: " + req.body.name)
   });
   });
 
